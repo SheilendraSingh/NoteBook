@@ -1,1 +1,9 @@
+# Keep repository root clean; app lives in notebook-app/
+/*
+!/.gitignore
+!/notebook-app/
+
+# Local backup created during migration
 notebook-app/.git_repo_backup/
+
+.vercel

@@ -1,17 +1,13 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI;
-
-if (!MONGODB_URI) {
-  throw new Error("Missing MONGODB_URI. Add it in your .env file.");
-}
-
 function getMongoUri() {
-  if (!MONGODB_URI) {
+  const mongoUri = process.env.MONGODB_URI;
+
+  if (!mongoUri) {
     throw new Error("Missing MONGODB_URI. Add it in your .env file.");
   }
 
-  return MONGODB_URI;
+  return mongoUri;
 }
 
 type MongooseCache = {
